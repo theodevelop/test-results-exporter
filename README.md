@@ -1,43 +1,43 @@
 # Test Results Exporter
 
-A Manifest V3 browser extension that exports visible test results from compatible pages to a local JSON file.
+Extension WebExtension (Manifest V3) pour exporter dans un fichier JSON les résultats de tests **déjà visibles** sur la page active :
 
-## Features
+- catégories et nom des tests ;
+- statut visible (réussi / échoué / inconnu) ;
+- messages d’échec visibles, lorsqu’ils sont affichés par la page.
 
-- Exports test categories and names.
-- Captures visible statuses: passed, failed, or unknown.
-- Includes visible failure messages and diffs when available.
-- Shows progress while an export runs.
+## Confidentialité
 
-## Privacy
+L’extension ne possède ni serveur, ni analytics, ni permission d’accès permanent aux sites. Elle s’exécute seulement après un clic de l’utilisateur sur son bouton, dans l’onglet actif, grâce à `activeTab` et `scripting`.
 
-The extension runs in the active tab after the user starts an export. It does not send data to an external service. Generated JSON files are downloaded locally.
+Elle ne lit pas les requêtes réseau, ne contourne pas l’authentification et ne récupère pas de contenu non rendu par la page. Le résultat est téléchargé localement sur l’ordinateur de l’utilisateur.
 
-Read the full [Privacy Policy](docs/PRIVACY_POLICY.md).
+Consulte [`docs/PRIVACY_POLICY.md`](docs/PRIVACY_POLICY.md) pour la version complète.
 
-## Development
+## Développement local
 
 ### Firefox
 
-1. Open `about:debugging#/runtime/this-firefox`.
-2. Select **Load Temporary Add-on**.
-3. Select `manifest.json` from this repository.
+1. Ouvrir `about:debugging#/runtime/this-firefox`.
+2. Cliquer sur **Charger un module complémentaire temporaire**.
+3. Charger le dossier : Firefox utilise `manifest.json` pour le test temporaire.
+4. Pour une installation signée ou une soumission AMO, utiliser le package `dist/test-results-exporter-firefox-v1.0.0.zip` généré par le script de build.
 
-### Chrome, Chromium, and Brave
+### Chrome, Chromium, Brave
 
-1. Open `chrome://extensions`.
-2. Enable **Developer mode**.
-3. Select **Load unpacked**.
-4. Choose this repository folder.
+1. Ouvrir `chrome://extensions`.
+2. Activer le **Mode développeur**.
+3. Cliquer sur **Charger l’extension non empaquetée**.
+4. Sélectionner ce dossier : `manifest.json` est déjà prêt pour Chrome.
 
-## Build packages
+## Générer les packages de publication
 
 ```bash
 node scripts/build.mjs
 ```
 
-The generated browser packages are written to `dist/`.
+Les fichiers apparaissent dans `dist/` : un ZIP pour Chrome Web Store, un ZIP pour Firefox/AMO et un ZIP source.
 
-## License
+## Licence
 
-[MIT](LICENSE) © 2026 Théo Irujo.
+MIT — voir [`LICENSE`](LICENSE).

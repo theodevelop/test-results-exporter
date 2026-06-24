@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test Results Exporter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="hero">
+        <img class="logo" src="icons/icon-48.png" alt="" />
+        <div>
+          <h1>Test Results Exporter</h1>
+          <p>Exporte les résultats visibles de la page ouverte vers un fichier JSON local.</p>
+        </div>
+      </header>
+
+      <fieldset>
+        <legend>Tests à exporter</legend>
+        <label class="choice">
+          <input type="radio" name="scope" value="all" checked />
+          <span>
+            <strong>Tous les tests</strong>
+            <small>Tests réussis et échoués</small>
+          </span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="scope" value="failed" />
+          <span>
+            <strong>Échecs uniquement</strong>
+            <small>Tests identifiés comme échoués dans la page</small>
+          </span>
+        </label>
+      </fieldset>
+
+      <button id="export-button" type="button">Exporter en JSON</button>
+
+      <section id="progress-section" class="progress-section" hidden aria-live="polite">
+        <div class="progress-heading">
+          <span id="progress-label">Préparation…</span>
+          <strong id="progress-count">0 / 0</strong>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <p id="current-test" class="current-test">—</p>
+      </section>
+
+      <p id="status" class="status" role="status">Ouvre une page de résultats compatible, puis lance l’export.</p>
+
+      <details>
+        <summary>Confidentialité et fonctionnement</summary>
+        <p>
+          L’extension lit uniquement les informations déjà affichées dans l’onglet actif après ton clic. Elle n’appelle aucun serveur, ne lit pas les requêtes réseau et ne récupère pas de tests non affichés.
+        </p>
+      </details>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
