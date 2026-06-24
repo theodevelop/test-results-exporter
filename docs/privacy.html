@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Test Results Exporter</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b1220; --surface:#121c2e; --text:#eef5ff; --muted:#a6b6cf; --accent:#86beff; --line:#243655; }
+    * { box-sizing:border-box; }
+    body { margin:0; font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); }
+    main { width:min(760px,calc(100% - 40px)); margin:0 auto; padding:64px 0; }
+    h1 { font-size:clamp(2rem,5vw,3.2rem); line-height:1.1; letter-spacing:-0.035em; margin:0 0 12px; }
+    h2 { margin-top:38px; font-size:1.35rem; }
+    p,li { color:var(--muted); }
+    a { color:var(--accent); }
+    .updated { color:#8192ab; }
+    code { background:var(--surface); border:1px solid var(--line); padding:2px 5px; border-radius:5px; color:#d7e8ff; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="index.html">← Test Results Exporter</a></p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 24 June 2026</p>
+
+    <h2>Summary</h2>
+    <p>Test Results Exporter does not collect, sell, or transmit personal data or browsing data to an external server.</p>
+
+    <h2>Data processed locally</h2>
+    <p>After the user starts an export, the extension reads only elements already rendered in the active tab, such as test names, categories, visible status, and visible failure messages. This information is used only to create a JSON file downloaded locally by the browser.</p>
+
+    <h2>Data not collected</h2>
+    <ul>
+      <li>No user account is created.</li>
+      <li>No cookie, analytics service, advertising SDK, or remote server is used.</li>
+      <li>The extension does not access browser history, passwords, network requests, or other tabs.</li>
+      <li>The extension does not retrieve content that is not displayed by the page.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><code>activeTab</code>: allows the extension to act only in the current tab after an explicit user action.</li>
+      <li><code>scripting</code>: allows the extension to read already-rendered page elements to build the local JSON export.</li>
+    </ul>
+
+    <h2>Retention</h2>
+    <p>The extension does not retain any data. The generated JSON file is stored locally in the download location configured by the user in their browser.</p>
+
+    <h2>Contact</h2>
+    <p>For privacy questions, contact <a href="mailto:irujotheo@gmail.com">irujotheo@gmail.com</a>.</p>
+  </main>
+</body>
+</html>
