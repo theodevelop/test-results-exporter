@@ -42,17 +42,31 @@ For local testing:
 2. Select **Load Temporary Add-on**.
 3. Choose `manifest.json` from the project folder.
 
-### Chrome, Chromium and Brave
+### Chromium-based desktop browsers
 
-The project can be loaded manually from source:
+The extension can be loaded manually from source on Chromium-based desktop browsers, including **Chrome, Chromium, Brave, Opera, Opera GX, Vivaldi, and Microsoft Edge**.
 
-1. Download or clone this repository.
-2. Open `chrome://extensions`.
+1. Download or clone this repository, then extract it if necessary.
+2. Open your browser's extension management page:
+
+   | Browser | Extensions page |
+   | --- | --- |
+   | Chrome / Chromium | `chrome://extensions` |
+   | Brave | `brave://extensions` |
+   | Opera / Opera GX | `opera://extensions` |
+   | Vivaldi | `vivaldi://extensions` |
+   | Microsoft Edge | `edge://extensions` |
+
 3. Enable **Developer mode**.
-4. Select **Load unpacked**.
-5. Choose the project folder containing `manifest.json`.
+4. Select **Load unpacked** (the wording may vary slightly by browser).
+5. Choose the extracted project folder containing `manifest.json`.
 
-> Manual installation is intended for local or development use. Chrome may display a warning for unpacked extensions.
+> Manual installation is intended for local or development use. Your browser may show a warning for unpacked extensions.
+
+### Other browsers
+
+- **Safari:** not currently supported.
+- **Mobile browsers:** not currently supported.
 
 ## Usage
 
@@ -91,7 +105,7 @@ The extension is intended for pages where test names, statuses, and failure mess
 
 ### Requirements
 
-- A recent version of Firefox, Chrome, Chromium, or Brave
+- A recent desktop version of Firefox, Chrome, Chromium, Brave, Opera, Vivaldi, or Microsoft Edge
 - Node.js only when generating release archives
 
 ### Build release packages
