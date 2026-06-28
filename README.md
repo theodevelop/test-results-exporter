@@ -34,7 +34,7 @@ Read the full [Privacy Policy](docs/PRIVACY_POLICY.md).
 
 ### Firefox
 
-The extension is being submitted to Firefox Add-ons. Once approved, installation will be available [here](https://addons.mozilla.org/fr/firefox/addon/test-results-exporter/).
+The extension is available [here](https://addons.mozilla.org/fr/firefox/addon/test-results-exporter/).
 
 
 For local testing:
